@@ -68,8 +68,8 @@
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
-                        <h2>Thoughts on Olvidar</h2>
-                        <p class="lead">When starting the game and building ideas around it, 
+                        <h2 class="text-center">Thoughts on Olvidar</h2>
+                        <p class="lead"><br>When starting the game and building ideas around it, 
                             we used some other's for inspiration to guide us in the direction we wanted.  
                             As shown above, some games (like <i>I commissioned some bees 14</i>) we took 
                             inspiration from the artwork while others (like <i>United Heist</i>) we took 
@@ -100,15 +100,24 @@
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
-                        <h2>Member's progress</h2>
-                        <p class="lead">For our 2D puzzle game, we implemented movement for left move, right move, and jump.  The jumping might not be needed but it was added just in case as it’s always fun to be able to jump in a game.  
-                            For the movement of left and right, the character model will also move, i.e. if the character move’s left then it will face left, whereas if the character moves right then it will face right.  
-                            An issue we ran into while implementing the movement was the ground physics, as everything the character is able to stand on must have its own “ground” layer so the character does not fall through the map and also so the player can move through certain objects if needed. 
-                            Another issue we ran into is that the template character created in the beginning of the project was just a simple square, so the physics collider we chose was just the box collider.  In the future, this might need to be changed depending on our character model as the box collider is not as flexible. 
-                            In the future, we would like to be able to have the characters movements be more fluid, as right now it is just a box that can jump and move left and right.  We would want the character to have its own sprites when walking (arms dangling), running (hair flow and arms and legs up), and jumping.  
+                        <h2 class="text-center">Member's progress</h2>
+                        <h3><br>Movement</h3>
+                        <p class="lead">For our 2D puzzle game, our character's movements were very simple. We implemented movement for moving left and right, and also for jumping.
+                            Currently the movement code allows the character to stick to walls, but this might be removed as we currently don't have a use for it.  
+                            The movement was first designed by making a simple square box the character allowing it to jump and move on the three different platforms.
+                            In the future we will transfer this movement to the actual character sprite and allow for some sprite animations when the character walks/runs/jumps. 
                             </p>
                             <img src="CharMoveTest.jpg" width=800px; height=450px alt="#">
-                           
+                        
+                            <h3><br>Scene Transition</h3>
+                        <p class="lead">Scene Transitions handled how the character would move to a different area when entering/exiting doors.  
+                            </p>
+                            
+
+                            <h3><br>Interactions</h3>
+                            <p class="lead">Interactables dealt with how the character will be able to handle certain items or dialogue with NPC's.  
+                                </p>
+                                
                             
                         </div>
                 </div>
