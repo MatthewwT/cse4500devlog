@@ -102,16 +102,24 @@
                     <div class="col-lg-8">
                         <h2 class="text-center">Member's progress</h2>
                         <h3><br>Movement</h3>
-                        <p class="lead">For our 2D puzzle game, our character's movements were very simple. We implemented movement for moving left and right, and also for jumping.
-                            Currently the movement code allows the character to stick to walls, but this might be removed as we currently don't have a use for it.  
-                            The movement was first designed by making a simple square box the character allowing it to jump and move on the three different platforms.
-                            In the future we will transfer this movement to the actual character sprite and allow for some sprite animations when the character walks/runs/jumps. 
+                        <p class="lead">For our 2D puzzle game, our character's movements were very simple. We implemented movement for moving left and right, and also for jumping. </p>
+                        <p class="lead">Currently the movement code allows the character to stick to walls, but this might be removed as we currently don't have a use for it.  
+                            The movement was first designed by making a simple square box the character allowing it to jump and move on the three different platforms.</p>
+                            <p class="lead">In the future we will transfer this movement to the actual character sprite and allow for some sprite animations when the character walks/runs/jumps. 
                             </p>
-                            <img src="CharMoveTest.JPG" width=800px; height=450px alt="#">
+                            <img src="CharMoveTest.jpg" width=800px; height=450px alt="#">
                         
                             <h3><br>Scene Transition</h3>
-                        <p class="lead">Scene Transitions handled how the character would move to a different area when entering/exiting doors.  
-                            </p>
+                        <p class="lead">For the 2D puzzle game that we are in the process of making, we added a scene transition. This is a 2D box collider that when a player tagged object interacts with it, will transition it to the next scene.</p>
+
+                            <p class="lead">How this works is by first having a player object, after giving it the movement we talked about in a previous dev log. You can add a “tag” onto the object, that tag being “player”. Afterwards, you make a 2D box collider with a trigger. This makes it so whenever a “player” tag object interacts with the collider, they are then moved to that next scene.</p>
+                            
+                            <p class="lead">To access what scene to load is by accessing the Scene Manager in unity, as each scene increases by 1. It makes it so when the player goes through the door, the trigger just has to increment the scene it's currently in by one.</p>
+                            
+                            <p class="lead">The current issue at the moment is having the player spawn at a predetermined vector without having to add the player where you’d want them to be at. It adds a bit more work on where you want the player to spawn and makes it impractical when it comes to moving the player through transition.</p>
+                            
+                            <p class="lead">This leads to another issue of being unable to make a transition to a previous scene, as we do not have the vectors to move the player model to spawn exactly where you want them to. This then makes them spawn where you have them by default which can make it quite awkward.  </p>
+                            
                             
 
                             <h3><br>Interactions</h3>
